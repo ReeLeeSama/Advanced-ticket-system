@@ -18,6 +18,7 @@ async def ping(ctx):
     await ctx.reply("Pong")
 
 @client.command()
+@commands.has_permission(administrator=True)
 async def setup(ctx,channel:discord.TextChannel):
         g_id = ctx.guild.id
         c_id = channel.id
